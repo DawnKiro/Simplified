@@ -13,7 +13,7 @@
           "argument1": -256,
           "argument2": {
             "type": "simplified:distance",
-            "distance_type": "euclidian",
+            "distance_type": "euclidean",
             "scale_y": 0
           }
         }

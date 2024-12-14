@@ -10,7 +10,7 @@ import org.jetbrains.annotations.NotNull;
 
 public record DistanceDFType(@NotNull DistanceType distanceType, int originX, int originY, int originZ, double scaleX, double scaleY, double scaleZ) implements DensityFunction {
     public static final MapCodec<DistanceDFType> CODEC = RecordCodecBuilder.mapCodec(instance -> instance.group(
-            DistanceType.CODEC.optionalFieldOf("distance_type", DistanceType.EUCLIDIAN).forGetter(DistanceDFType::distanceType),
+            DistanceType.CODEC.optionalFieldOf("distance_type", DistanceType.EUCLIDEAN).forGetter(DistanceDFType::distanceType),
             Codec.INT.optionalFieldOf("origin_x", 0).forGetter(DistanceDFType::originX),
             Codec.INT.optionalFieldOf("origin_y", 0).forGetter(DistanceDFType::originY),
             Codec.INT.optionalFieldOf("origin_z", 0).forGetter(DistanceDFType::originZ),
@@ -27,7 +27,7 @@ public record DistanceDFType(@NotNull DistanceType distanceType, int originX, in
         double dz = Math.abs(originZ - pos.blockZ()) * scaleZ;
 
         return switch (distanceType) {
-            case EUCLIDIAN -> Math.sqrt(dx * dx + dy * dy + dz * dz);
+            case EUCLIDEAN -> Math.sqrt(dx * dx + dy * dy + dz * dz);
             case MANHATTAN -> dx + dy + dz;
             case CHEBYSHEV -> Math.max(Math.max(dx, dy), dz);
         };
@@ -59,7 +59,7 @@ public record DistanceDFType(@NotNull DistanceType distanceType, int originX, in
     }
 
     public enum DistanceType implements StringIdentifiable {
-        EUCLIDIAN("euclidian"),
+        EUCLIDEAN("euclidean"),
         MANHATTAN("manhattan"),
         CHEBYSHEV("chebyshev");
 

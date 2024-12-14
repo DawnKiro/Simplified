@@ -15,6 +15,7 @@ public class Simplified implements ModInitializer {
         LOGGER.info("Simplifying your game...");
 
         Worldgen.register();
+
     }
 
     public static Identifier id(String name) {
