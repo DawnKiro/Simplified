@@ -3,19 +3,15 @@
   "argument": {
     "type": "minecraft:add",
     "argument1": {
-      "type": "minecraft:max",
-      "argument1": 0,
+      "type": "minecraft:mul",
+      "argument1": -0.0004,
       "argument2": {
-        "type": "minecraft:mul",
-        "argument1": -0.0004,
+        "type": "minecraft:add",
+        "argument1": 256,
         "argument2": {
-          "type": "minecraft:add",
-          "argument1": 256,
-          "argument2": {
-            "type": "simplified:distance",
-            "distance_type": "euclidian",
-            "scale_y": 0
-          }
+          "type": "simplified:distance",
+          "distance_type": "euclidian",
+          "scale_y": 0
         }
       }
     },

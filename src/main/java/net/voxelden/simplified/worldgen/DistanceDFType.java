@@ -45,7 +45,7 @@ public record DistanceDFType(@NotNull DistanceType distanceType, int originX, in
 
     @Override
     public double minValue() {
-        return Double.NEGATIVE_INFINITY;
+        return 0;
     }
 
     @Override
