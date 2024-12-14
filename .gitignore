@@ -111,9 +111,12 @@ gradle-app.setting
 
 **/build/
 
-# Common working directory
-run/
-runs/
-
 # Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
 !gradle-wrapper.jar
+
+run/*
+!run/saves
+run/saves/New World/*
+!run/saves/New World/datapacks
+!run/saves/New World/datapacks/*
+!run/saves/New World/level.dat
