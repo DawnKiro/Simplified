@@ -7,13 +7,13 @@ import net.voxelden.simplified.Simplified;
 import net.voxelden.simplified.util.Files;
 
 public class SimplifiedClient implements ClientModInitializer {
-    private static final String SHADERPACK_NAME = "simplified-builtin.zip";
+    private static final String SHADERPACK_NAME = "builtin.zip";
 
     @Override
     public void onInitializeClient() {
         ClientLifecycleEvents.CLIENT_STARTED.register(client -> {
             try {
-                Files.copyFromAssets(client, Simplified.id("shaderpack/" + SHADERPACK_NAME), Iris.getShaderpacksDirectory().resolve(SHADERPACK_NAME));
+                Files.copyFromAssets(client, Simplified.id("shaderpacks/" + SHADERPACK_NAME), Iris.getShaderpacksDirectory().resolve(SHADERPACK_NAME));
                 Iris.getIrisConfig().setShaderPackName(SHADERPACK_NAME);
                 Iris.getIrisConfig().setShadersEnabled(true);
             } catch (Exception e) {

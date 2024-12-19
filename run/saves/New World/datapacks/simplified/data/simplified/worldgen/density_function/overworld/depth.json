@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:range_choice",
+  "input": {
+    "type": "simplified:distance",
+    "distance_type": "chebyshev",
+    "origin_x": -2,
+    "origin_z": -2,
+    "scale_y": 0
+  },
+  "min_inclusive": 0,
+  "max_exclusive": 1020,
+  "when_in_range": {
+    "type": "minecraft:max",
+    "argument1": -1,
+    "argument2": "minecraft:overworld/depth"
+  },
+  "when_out_of_range": -2
+}

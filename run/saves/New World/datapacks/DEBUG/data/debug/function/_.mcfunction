@@ -1,0 +1,2 @@
+tellraw @s {"color":"white","shadow_color":1,"text":" [CONFIG]"}
+tellraw @s [{"color":"gray","shadow_color":1,"text":" | "},{"color":"green","text":"■","clickEvent":{"action":"run_command","value":"/scoreboard players set killall config 1"}},{"color":"red","text":"■","clickEvent":{"action":"run_command","value":"/scoreboard players set killall config 0"}},{"color":"white","text":" Killall","hoverEvent":{"action":"show_text","value":[{"score":{"name":"killall","objective":"config"}}]}}]

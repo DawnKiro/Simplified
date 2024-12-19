@@ -4,8 +4,11 @@
   "package": "net.voxelden.simplified.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "MineshaftGeneratorPartMixin"
   ],
   "client": [
+    "DimensionsEffectsOverworldMixin",
+    "WorldBorderRenderingMixin"
   ],
   "injectors": {
     "defaultRequire": 1

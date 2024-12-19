@@ -22,9 +22,10 @@
   ],
   "depends": {
     "fabricloader": ">=${loader_version}",
-    "fabric": "*",
+    "fabric": ">=${fabric_version}+${minecraft_version}",
     "minecraft": "${minecraft_version}",
-    "sodium": ">=0.6.3+mc1.21.4",
-    "iris": ">=${iris_version}"
-  }
+    "sodium": ">=${sodium_version}+mc${minecraft_version}",
+    "iris": ">=${iris_version}+${minecraft_version}-fabric"
+  },
+  "accessWidener" : "simplified.accesswidener"
 }

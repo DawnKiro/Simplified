@@ -10,6 +10,9 @@ base {
     archivesName = project.archives_base_name
 }
 
+loom {
+    accessWidenerPath = file("src/main/resources/simplified.accesswidener")
+}
 
 repositories {
     maven {
@@ -23,16 +26,16 @@ dependencies {
     mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
-    modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-
-    modImplementation "maven.modrinth:sodium:${sodium_version}"
-    modImplementation "maven.modrinth:iris:${iris_version}"
+    modImplementation("net.fabricmc.fabric-api:fabric-api:${fabric_version}+${minecraft_version}")
+    modImplementation("maven.modrinth:sodium:mc${minecraft_version}-${sodium_version}-fabric")
+    modCompileOnly("maven.modrinth:iris:${iris_version}+${minecraft_version}-fabric")
 }
 
 processResources {
     inputs.property "version", project.version
     inputs.property "minecraft_version", project.minecraft_version
     inputs.property "loader_version", project.loader_version
+    inputs.property "fabric_version", project.fabric_version
     inputs.property "sodium_version", project.sodium_version
     inputs.property "iris_version", project.iris_version
     filteringCharset "UTF-8"
@@ -41,6 +44,7 @@ processResources {
         expand "version": project.version,
                 "minecraft_version": project.minecraft_version,
                 "loader_version": project.loader_version,
+                "fabric_version": project.fabric_version,
                 "sodium_version": project.sodium_version,
                 "iris_version": project.iris_version
     }
