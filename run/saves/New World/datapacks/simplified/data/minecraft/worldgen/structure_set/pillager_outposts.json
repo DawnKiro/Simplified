@@ -1,0 +1,16 @@
+{
+  "placement": {
+    "type": "minecraft:concentric_rings",
+    "distance": 5,
+    "spread": 2,
+    "count": 3,
+    "preferred_biomes": "#minecraft:has_structure/pillager_outpost",
+    "salt": 1
+  },
+  "structures": [
+    {
+      "structure": "minecraft:pillager_outpost",
+      "weight": 1
+    }
+  ]
+}

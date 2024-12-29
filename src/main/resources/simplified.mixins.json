@@ -4,10 +4,21 @@
   "package": "net.voxelden.simplified.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "MineshaftGeneratorPartMixin"
+    "DirtPathBlockMixin",
+    "EnderDragonEntityMixin",
+    "FilledMapItemMixin",
+    "MapStateMixin",
+    "MineshaftGeneratorPartMixin",
+    "ShovelItemMixin",
+    "VillagerEntityMixin"
   ],
   "client": [
+    "AbstractBlockRenderContextAccessor",
+    "BlockOcclusionCacheMixin",
+    "BlockRendererMixin",
+    "CommonUniformsMixin",
     "DimensionsEffectsOverworldMixin",
+    "StandardMacrosMixin",
     "WorldBorderRenderingMixin"
   ],
   "injectors": {

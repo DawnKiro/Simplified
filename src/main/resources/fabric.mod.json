@@ -15,6 +15,9 @@
     ],
     "main": [
       "net.voxelden.simplified.Simplified"
+    ],
+    "server": [
+      "net.voxelden.simplified.SimplifiedDedicatedServer"
     ]
   },
   "mixins": [
@@ -27,5 +30,5 @@
     "sodium": ">=${sodium_version}+mc${minecraft_version}",
     "iris": ">=${iris_version}+${minecraft_version}-fabric"
   },
-  "accessWidener" : "simplified.accesswidener"
+  "accessWidener": "simplified.accesswidener"
 }

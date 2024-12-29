@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:add",
+  "argument1": {
+    "type": "minecraft:y_clamped_gradient",
+    "from_y": 36,
+    "to_y": 44,
+    "from_value": 1,
+    "to_value": 0
+  },
+  "argument2": {
+    "type": "minecraft:mul",
+    "argument1": 0.008,
+    "argument2": {
+      "type": "simplified:distance",
+      "scale_y": 0
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "values": [
+    "#minecraft:campfires",
+    "#minecraft:impermeable",
+    "#minecraft:leaves",
+    "#minecraft:trapdoors",
+    "minecraft:barrier",
+    "minecraft:copper_grate",
+    "minecraft:exposed_copper_grate",
+    "minecraft:glow_lichen",
+    "minecraft:oxidized_copper_grate",
+    "minecraft:sculk_vein",
+    "minecraft:waxed_copper_grate",
+    "minecraft:waxed_exposed_copper_grate",
+    "minecraft:waxed_oxidized_copper_grate",
+    "minecraft:waxed_weathered_copper_grate",
+    "minecraft:weathered_copper_grate"
+  ]
+}
