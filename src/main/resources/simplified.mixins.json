@@ -18,6 +18,7 @@
     "BlockRendererMixin",
     "CommonUniformsMixin",
     "DimensionsEffectsOverworldMixin",
+    "HeldItemRendererMixin",
     "StandardMacrosMixin",
     "WorldBorderRenderingMixin"
   ],
